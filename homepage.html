@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
+
     <!-- Navigation -->
     <nav class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold">Vilip</div>
+            <div class="w-10 h-10 overflow-hidden rounded-full">
+                <img 
+                    src="./images/profile-icon.png"  
+                    alt="Vilip's profile"
+                    class="w-full h-full object-cover"
+                >
+            </div>
             <div class="flex space-x-6">
                 <a href="#about" class="hover:text-blue-600">About</a>
                 <a href="#skills" class="hover:text-blue-600">Skills</a>
@@ -23,9 +30,9 @@
     <!-- Hero Section -->
     <section id="about" class="container mx-auto px-6 py-16">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-6">Hey, I'm Vilip 👋</h1>
+            <h1 class="text-4xl font-bold mb-6">Hey, I'm Vilip</h1>
             <p class="text-xl text-gray-600 mb-8">
-                I'm a fullstack software developer from Germany/Brazil, passionate about creating efficient and elegant solutions.
+                I'm a computer science student from 🇩🇪/🇧🇷, passionate about writing clean and good code.
             </p>
         </div>
     </section>
@@ -43,19 +50,31 @@
                 
                 <!-- Quarkus -->
                 <div class="p-4 bg-gray-50 rounded-lg text-center hover:shadow-md transition-shadow">
-                    <i class="fas fa-bolt text-3xl mb-2 text-pink-600"></i>
+                    <img 
+                        src="./images/quarkus-icon.png"
+                        alt="Quarkus" 
+                        class="w-12 h-12 mx-auto mb-2"
+                    >
                     <h3 class="font-semibold">Quarkus</h3>
                 </div>
                 
                 <!-- LangChain4j -->
                 <div class="p-4 bg-gray-50 rounded-lg text-center hover:shadow-md transition-shadow">
-                    <i class="fas fa-link text-3xl mb-2 text-green-600"></i>
+                    <img 
+                        src="./images/langchain4j-icon.png"
+                        alt="LangChain4j" 
+                        class="w-12 h-12 mx-auto mb-2"
+                    >
                     <h3 class="font-semibold">LangChain4j</h3>
                 </div>
                 
                 <!-- TypeScript -->
                 <div class="p-4 bg-gray-50 rounded-lg text-center hover:shadow-md transition-shadow">
-                    <i class="fab fa-js text-3xl mb-2 text-yellow-500"></i>
+                    <img 
+                        src="./images/typescript-icon.png"
+                        alt="TypeScript" 
+                        class="w-12 h-12 mx-auto mb-2"
+                    >
                     <h3 class="font-semibold">TypeScript</h3>
                 </div>
                 
@@ -92,13 +111,24 @@
             <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Example Project Card (Add your actual projects) -->
-                <a href="https://github.com/vvilip/project1" class="block group">
+                <a href="https://github.com/vvilip/wikibot" class="block group">
                     <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600">Project 1</h3>
-                        <p class="text-gray-600">Description of your project goes here.</p>
+                        <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600">Wikibot</h3>
+                        <p class="text-gray-600">A simple matrix bot that sends you the featured wikipedia article summarized</p>
                     </div>
                 </a>
-                <!-- Add more project cards as needed -->
+                <a href="https://github.com/explore-de/rage4j" class="block group">
+                    <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600">Rage4j</h3>
+                        <p class="text-gray-600">An open source LLM testing and evaluation framework with various metrics</p>
+                    </div>
+                </a>
+                <a href="https://code.mymiggi.de/vm/url-eater/src/branch/main/api" class="block group">
+                    <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600">URL eater</h3>
+                        <p class="text-gray-600">The backend of a simple url shortener written in Quarkus</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
