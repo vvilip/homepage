@@ -1,0 +1,245 @@
+/* Default (Dark) Mode */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #c5c5c5;
+    background: #1a1a1a;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    padding: 2rem;
+    transition: border-color 0.3s;
+}
+
+h1, h2, h3 {
+    color: #3d9970; /* Green accent for headers */
+    transition: color 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+nav.social-icons a {
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none; /* Remove underline from icons */
+}
+
+nav.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #c5c5c5; /* Default dark mode color */
+    transition: fill 0.3s;
+}
+
+nav.social-icons a:hover svg {
+    fill: #3d9970; /* Dark mode hover color */
+}
+
+/* Light mode overrides */
+body.light-mode nav.social-icons svg {
+    fill: #555; /* Default light mode color */
+}
+
+body.light-mode nav.social-icons a:hover svg {
+    fill: #0066cc; /* Light mode hover color */
+}
+
+nav a:hover, article h3 a:hover {
+    text-decoration: underline;
+}
+
+article {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+article h3 a {
+    color: #3d9970; /* Green accent for article titles */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+time {
+    font-size: 0.9rem;
+    color: #888; /* Lighter grey for time */
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+article p {
+    color: #c5c5c5; /* Main text color */
+    transition: color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+    color: #333;
+    background: #fff;
+}
+
+
+
+body.light-mode h1, 
+    body.light-mode h3,
+body.light-mode article h3 a {
+    color: #0066cc; /* Blue for links/headers in light mode */
+}
+
+body.light-mode h2,
+body.light-mode nav,
+body.light-mode article {
+    border-color: #eee;
+}
+
+body.light-mode time {
+    color: #666;
+}
+
+body.light-mode article p {
+    color: #555;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #888; /* Fallback for text */
+    padding: 0.5rem; /* Adjusted padding for icon */
+    font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: color 0.3s, border-color 0.3s;
+    line-height: 0; /* To collapse button height to icon size */
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+    fill: #888;
+    transition: fill 0.3s;
+}
+
+.theme-toggle .moon {
+    display: none;
+}
+
+body.light-mode .theme-toggle .sun {
+    display: none;
+}
+
+body.light-mode .theme-toggle .moon {
+    display: block;
+}
+
+
+
+body.light-mode .theme-toggle svg {
+    fill: #666;
+}
+
+/* Style for non-icon nav links, like the 'Back' button */
+nav a {
+    color: #3d9970;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+body.light-mode nav a {
+    color: #0066cc;
+}
+
+body.light-mode main {
+    border-color: #ddd;
+}
+
+article p strong {
+    color: #3d9970;
+}
+
+body.light-mode article p strong {
+    color: #0066cc;
+}
+
+/* Tab Navigation */
+.tab-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 0.5rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+}
+.tab-btn.active {
+    color: #c5c5c5;
+    border-bottom-color: #c5c5c5;
+}
+.hidden {
+    display: none;
+}
+
+/* Light mode overrides for tabs */
+body.light-mode .tab-buttons {
+    border-bottom-color: #eee;
+}
+body.light-mode .tab-btn {
+    color: #666;
+}
+body.light-mode .tab-btn.active {
+    color: #333;
+    border-bottom-color: #333;
+}

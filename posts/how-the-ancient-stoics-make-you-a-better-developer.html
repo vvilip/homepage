@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Ancient Stoics Make You a Better Developer</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <script>
+        // This script runs immediately to prevent a flash of the wrong theme.
+        let theme = 'dark';
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlTheme = urlParams.get('theme');
+            if (urlTheme) {
+                theme = urlTheme;
+            } else {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    theme = storedTheme;
+                }
+            }
+        } catch (e) {}
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    </script>
+    <button class="theme-toggle" title="Toggle theme">
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.472 4.747a.75.75 0 0 1 1.06 0.009l1.523 1.24a.75.75 0 0 1-.977 1.192l-1.523-1.24a.75.75 0 0 1-.009-1.06ZM2.25 12c0-.414.336-.75.75-.75h2.25a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75ZM16.5 4.5a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9ZM19.747 7.472a.75.75 0 0 1 0-1.06l1.24-1.523a.75.75 0 0 1 1.192.977l-1.24 1.523a.75.75 0 0 1-1.06.009ZM17.25 12a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H18a.75.75 0 0 1-.75-.75ZM4.747 16.528a.75.75 0 0 1-.009 1.06l-1.24 1.523a.75.75 0 1 1-.977-1.192l1.24-1.523a.75.75 0 0 1 1.06-.009ZM12 17.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V18a.75.75 0 0 1 .75-.75ZM16.528 19.747a.75.75 0 0 1-.009 1.06l-1.523 1.24a.75.75 0 0 1-.977-1.192l1.523-1.24a.75.75 0 0 1 1.06.009Z" /></svg>
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+    </button>
+    <main>
+        <nav>
+            <a href="../index.html">← let me out</a>
+        </nav>
+        <article>
+            <h1>How the ancient stoics make you a better developer</h1>
+            <time>2025-11-06</time>
+            <p>In my career, really just my university education, I hit a period where my programming skills stagnated. I kept reading about software development tips, tried to learn new concepts every day, and even started grinding roadmap.sh, but nothing made me a better computer scientist. orz</p>
+			<br>
+            <p>I looked for help on Reddit, gutefrage dot net and LinkedIn. The advice was always the same: work on real projects, meditate, eat raw meat off a chopping board, grind harder. The people giving these tips apparently were 18 years old tech CEOs and entrepreneurs. How could I compare? I was still learning what mvn clean install does, and they had million-dollar startups. I felt behind, frustrated, and trapped in imposter syndrome. Computer science was draining not just my time, but my mental health.</p>
+            <br>
+			<p>Then I encountered Stoicism. I had heard of it before, mostly associated with gym bros, but a friend of mine lived it sincerely. That sparked my interest.</p>
+            <br>
+			<p>I won’t bore you with the usual Stoic buzzwords: “Control your emotions,” “Focus only on what you can control.” Those are helpful in some situations, but they weren’t what changed my growth as a person and developer.</p>
+            <br>
+			<p>What did change me was a deeper idea that every act should be done with integrity and purpose. Marcus Aurelius emphasized that we should treat every action as if it were the most important thing in the world.</p>
+            <br>
+			<p>This idea made me realize something crucial. I didn’t actually care about what I was learning. I learned to be “good”, to appear competent, rather than because I enjoyed the craft. I made side projects for my portfolio, not because I was passionate about them. I read articles on build tools not to understand them, but to “catch up” with others.</p>
+            <p>You don’t get truly good at something when you chase status, money, or comparison. You get good at something when you care about it.</p>
+			<br>
+            <p>Care about good code. Care about open source. Care about the community. Make projects because they matter to you, not because they look good on a résumé.</p>
+			<br>
+            <p>Ignore the posers, whether they have ten internships at big tech or billion-dollar startups. Focus on single steps and take them with integrity. Discover what you care about and pursue it fully.</p>
+            <br>
+			<p>Write code as if it were the most important thing in the world. That mindset, the love for the craft itself, is what will make you grow faster and higher than any hack, tip, or shortcut ever could.</p>
+        </article>
+    </main>
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+
+        function updateLinks() {
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            document.querySelectorAll('a').forEach(anchor => {
+                if (anchor.href && !anchor.href.startsWith('http') && anchor.target !== '_blank') {
+                    try {
+                        const destination = new URL(anchor.href);
+                        destination.searchParams.set('theme', currentTheme);
+                        anchor.href = destination.href;
+                    } catch (e) {}
+                }
+            });
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const newTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            updateLinks();
+        });
+
+        updateLinks();
+    </script>
+</body>
+</html>
